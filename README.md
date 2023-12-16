@@ -2,26 +2,33 @@
 
 ## Overview
 
-This project implements a Handwritten Digit Recognition system using transfer learning. The model is trained on a pre-existing deep learning architecture, leveraging the knowledge gained from a source task to improve the learning of the target task.
+This project implements handwritten digit recognition using transfer learning with the VGG16 model. The goal is to leverage pre-trained convolutional layers from VGG16 and train a custom top model for recognizing digits.
 
-## Features
+## Key Components
 
-- Transfer learning with a pre-trained neural network for improved accuracy.
-- Dataset used: [MNIST](http://yann.lecun.com/exdb/mnist/)
-- Python-based implementation using [PyTorch](https://pytorch.org/).
-- Simple and easy-to-understand codebase.
+- **Data Preprocessing:**
+  - Grayscale images from the MNIST dataset are resized and converted to RGB format.
+  - Images are normalized to a range of [0, 1].
 
-## Dependencies
+- **Model Architecture:**
+  - VGG16 model with frozen convolutional layers.
+  - Custom top model for digit recognition.
 
-- Python 3.x
-- PyTorch
-- Additional dependencies (list them if necessary)
+- **Model Training:**
+  - Compiled using the Adam optimizer and categorical crossentropy loss.
+  - Trained on the preprocessed MNIST dataset for one epoch.
 
-## Installation
+- **Drawing and Recognition:**
+  - Interactive drawing and recognition with the `draw_and_recognize` function.
 
-1. Clone the repository:
+- **Evaluation and Visualization:**
+  - Model accuracy on the test set.
+  - Confusion matrix visualization.
 
-   ```bash
-   git clone https://github.com/eshwargajula/Handwritten-Digit-Recognition.git
-   cd Handwritten-Digit-Recognition
+## Usage
 
+To use the interactive drawing and recognition feature, call the `draw_and_recognize` function with your trained model.
+
+```python
+# Call the function with your trained model
+draw_and_recognize(model)
