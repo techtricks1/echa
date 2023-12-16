@@ -24,6 +24,12 @@ This project implements handwritten digit recognition using transfer learning wi
 - **Evaluation and Visualization:**
   - Model accuracy on the test set.
   - Confusion matrix visualization.
+## Requirements
+  - Python 3.x
+  - TensorFlow
+  - NumPy
+  - Matplotlib
+  - IPython
 
 ## Usage
 
@@ -32,3 +38,10 @@ To use the interactive drawing and recognition feature, call the `draw_and_recog
 ```python
 # Call the function with your trained model
 draw_and_recognize(model)
+```
+## Installation
+  Install the required dependencies:
+  ```pip install tensorflow numpy matplotlib ipython```
+  Run the script with the following command:
+  ``python your_script_name.py``
+
